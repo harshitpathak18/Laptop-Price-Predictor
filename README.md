@@ -1,7 +1,4 @@
 **🚀Project: Laptop Price Predictor🚀**
-[![Laptop Price Predictor Demo](https://img.youtube.com/vi/YOUR_VIDEO_ID/0.jpg)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
-- Laptop Price Predictor Demo: Check out our project in action!
-
 
 **Functionality:**
 
