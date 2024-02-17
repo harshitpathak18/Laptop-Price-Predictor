@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict Laptop Price</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-300">
+
+    <h1 class="text-2xl font-medium text-voilet capitalize py-3 text-center">Laptop Price Predictor</h1>
+
+    <!-- component -->
+    <section class="max-w-4xl p-6 mx-auto bg-indigo-600 rounded-md  dark:bg-voilet-800 mt-4">
+        <form method="post">
+            {% csrf_token %}
+            <div class="grid grid-cols-1 gap-6 mt-2 sm:grid-cols-2">
+                <div>
+                    <label class="text-white dark:text-gray-200" for="username">Brand</label>
+                    <select name="company" class="block w-full px-3 py-2 mt-1 text-white-500 bg-white border border-gray-300 rounded-md dark:bg-white-500 dark:text-black dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                        {% for brand in brands %}
+                            <option>{{brand}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div>
+                    <label class="text-white dark:text-gray-200" for="emailAddress">Type</label>
+                    <select name="type" class="block w-full px-3 py-2 mt-1 text-white-500 bg-white border border-gray-300 rounded-md dark:bg-white-500 dark:text-black dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                        {% for type in types %}
+                            <option>{{type}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+
+                <div>
+                    <label class="text-white dark:text-gray-200" for="passwordConfirmation">CPU</label>
+                    <select name="cpu" class="block w-full px-3 py-2 mt-1 text-white-500 bg-white border border-gray-300 rounded-md dark:bg-white-500 dark:text-black dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                        {% for cpu in cpus %}
+                            <option>{{cpu}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div>
+                    <label class="text-white dark:text-gray-200" for="passwordConfirmation">GPU</label>
+                    <select name="gpu" class="block w-full px-3 py-2 mt-1 text-white-500 bg-white border border-gray-300 rounded-md dark:bg-white-500 dark:text-black dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                        {% for gpu in gpus %}
+                            <option>{{gpu}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+
+                <div>
+                    <label class="text-white dark:text-gray-200" for="passwordConfirmation">SSD (in GBs)</label>
+                    <select name="ssd" class="block w-full px-3 py-2 mt-1 text-white-500 bg-white border border-gray-300 rounded-md dark:bg-white-500 dark:text-black dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                        {% for ssd in ssds %}
+                            <option>{{ssd}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div>
+                    <label class="text-white dark:text-gray-200" for="passwordConfirmation">HDD (in GBs)</label>
+                    <select name="hdd" class="block w-full px-3 py-2 mt-1 text-white-500 bg-white border border-gray-300 rounded-md dark:bg-white-500 dark:text-black dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                        {% for hdd in hdds %}
+                            <option>{{hdd}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+
+                <div>
+                    <label class="text-white dark:text-gray-200" for="password">Ram (in GBs)</label>
+                    <select name="ram" class="block w-full px-3 py-2 mt-1 text-white-500 bg-white border border-gray-300 rounded-md dark:bg-white-500 dark:text-black dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                        {% for ram in rams %}
+                            <option>{{ram}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                <div>
+                    <label class="text-white dark:text-gray-200" for="passwordConfirmation">Resolution</label>
+                    <select name="resolution" class="block w-full px-3 py-2 mt-1 text-white-500 bg-white border border-gray-300 rounded-md dark:bg-white-500 dark:text-black dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                        {% for resolution in resolutions %}
+                            <option>{{resolution}}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+
+                
+
+                <div>
+                    <label class="text-white dark:text-gray-200" for="passwordConfirmation">Touch Screen</label>
+                    <select name="touchscreen" class="block w-full px-3 py-2 mt-1 text-white-500 bg-white border border-gray-300 rounded-md dark:bg-white-500 dark:text-black dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                        <option>Yes</option>
+                        <option selected>No</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label class="text-white dark:text-gray-200" for="passwordConfirmation">IPS</label>
+                    <select name="ips" class="block w-full px-3 py-2 mt-1 text-white-500 bg-white border border-gray-300 rounded-md dark:bg-white-500 dark:text-black dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring">
+                        <option>Yes</option>
+                        <option selected>No</option>
+                    </select>
+                </div>
+
+
+
+                <div>
+                    <label class="text-white dark:text-gray-200" for="passwordConfirmation">Screen Size</label>
+                    <input  name="screensize" type="number" c min="11" max="17" step="0.1" class="block w-full px-3 py-2 mt-1 text-white-500 bg-white border border-gray-300 rounded-md dark:bg-white-500 dark:text-black dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" required></textarea>
+                </div>
+
+
+
+                <div>
+                    <label class="text-white dark:text-gray-200" for="passwordConfirmation">Weight (in KGs)</label>
+                    <input name="weight" type="number" min="0.70" max="4.50" step="0.1" class="block w-full px-3 py-2 mt-1 text-white-500 bg-white border border-gray-300 rounded-md dark:bg-white-500 dark:text-black dark:border-gray-600 focus:border-blue-500 dark:focus:border-blue-500 focus:outline-none focus:ring" required></textarea>
+                </div>
+                
+            </div>
+
+            <div class="flex justify-center mt-6">
+                <button class="px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-pink-500 rounded-lg hover:bg-pink-700 focus:outline-none focus:bg-gray-600" type="submit">Predict</button>
+            </div>
+        </form>
+
+        <h1>{{result}}</h1>
+    </section>
+
+
+</body>
+</html>

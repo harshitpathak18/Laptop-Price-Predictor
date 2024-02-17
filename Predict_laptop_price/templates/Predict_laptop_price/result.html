@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predict Laptop Price</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-300">
+
+    <h1 class="text-2xl font-medium text-voilet capitalize py-3 text-center">Laptop Price Predictor</h1>
+
+    <!-- component -->
+    <section class="max-w-4xl p-6 mx-auto bg-indigo-600 rounded-md  dark:bg-voilet-800 mt-4">
+            <div class="grid grid-cols-1 gap-6 mt-2 sm:grid-cols-2">
+                <div>
+                    <label class="text-white dark:text-gray-200" for="username">Brand</label>
+                    <span class="text-white text-md  me-2 px-2.5 py-0.5 ">- {{brand}}</span>
+
+                </div>
+
+                <div>
+                    <label class="text-white dark:text-gray-200" for="emailAddress">Type</label>
+                    <span class="text-white text-md  me-2 px-2.5 py-0.5 ">- {{type}}</span>
+
+                </div>
+
+
+                <div>
+                    <label class="text-white dark:text-gray-200" for="passwordConfirmation">CPU</label>
+                    <span class="text-white text-md  me-2 px-2.5 py-0.5 ">- {{cpu}}</span>
+
+                </div>
+
+                <div>
+                    <label class="text-white dark:text-gray-200" for="passwordConfirmation">GPU</label>
+                    <span class="text-white text-md  me-2 px-2.5 py-0.5 ">- {{gpu}}</span>
+
+                </div>
+
+
+                <div>
+                    <label class="text-white dark:text-gray-200" for="passwordConfirmation">SSD (in GBs)</label>
+                    <span class="text-white text-md  me-2 px-2.5 py-0.5 ">- {{ssd}} GB</span>
+
+                </div>
+
+                <div>
+                    <label class="text-white dark:text-gray-200" for="passwordConfirmation">HDD (in GBs)</label>
+                    <span class="text-white text-md  me-2 px-2.5 py-0.5 ">- {{hdd}} GB</span>
+
+                </div>
+
+
+                <div>
+                    <label class="text-white dark:text-gray-200" for="password">Ram (in GBs)</label>
+                    <span class="text-white text-md  me-2 px-2.5 py-0.5 ">- {{ram}} GB</span>
+
+                </div>
+
+                <div>
+                    <label class="text-white dark:text-gray-200" for="passwordConfirmation">Resolution</label>
+                    <span class="text-white text-md  me-2 px-2.5 py-0.5 ">- {{resolution}}</span>
+
+                </div>
+
+                
+
+                <div>
+                    <label class="text-white dark:text-gray-200" for="passwordConfirmation">Touch Screen</label>
+                    <span class="text-white text-md  me-2 px-2.5 py-0.5 ">- {{touchscreen}}</span>
+
+                </div>
+
+                <div>
+                    <label class="text-white dark:text-gray-200" for="passwordConfirmation">IPS</label>
+                    <span class="text-white text-md  me-2 px-2.5 py-0.5 ">- {{ips}}</span>
+
+                </div>
+
+
+
+                <div>
+                    <label class="text-white dark:text-gray-200" for="passwordConfirmation">Screen Size</label>
+                    <span class="text-white text-md  me-2 px-2.5 py-0.5 ">- {{screensize}} inches</span>
+                </div>
+
+
+
+                <div>
+                    <label class="text-white dark:text-gray-200" for="passwordConfirmation">Weight (in KGs)</label>
+                    <span class="text-white text-md  me-2 px-2.5 py-0.5 ">- {{weight}} Kg</span>
+                </div>
+
+                
+            </div>
+
+            <div class="mt-4 p-2 mt-5 text-lg text-green-800 rounded-lg bg-green-50 dark:text-green-400 text-center" role="alert">
+                <span class="text-xl">Predicted Price - Rs {{result}}</span> 
+            </div>
+
+
+            <div class="flex mt-2">
+                <a href="{% url 'home' %}" class="px-6 py-2 leading-5 text-white transition-colors duration-200 transform bg-yellow-500 rounded-lg hover:bg-yellow-400 focus:outline-none focus:bg-yellow-400" type="submit">Go Back</a>
+            </div>
+
+    </section>
+    
+    
+
+</body>
+</html>
